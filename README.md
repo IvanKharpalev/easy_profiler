@@ -75,7 +75,7 @@ For linking with easy_profiler you can specify path to library.
 
 ### If using CMake
 
-If you are using `cmake` set `CMAKE_PREFIX_PATH` to `lib/cmake/easy_profiler` directory (from [release](https://github.com/yse/easy_profiler/releases) package) and use function `find_package(easy_profiler)` with `target_link_libraries(... easy_profiler)`. 
+If you are using `cmake` set `CMAKE_PREFIX_PATH` `absolute_path/lib/cmake/easy_profiler` directory (from [release](https://github.com/yse/easy_profiler/releases) package) and use function `find_package(easy_profiler)` with `target_link_libraries(... easy_profiler)`. 
 
 Example:
 ``` cmake
@@ -85,7 +85,7 @@ set(SOURCES
     main.cpp
 )
 
-# CMAKE_PREFIX_PATH should be set to <easy_profiler-release_dir>/lib/cmake/easy_profiler
+# CMAKE_PREFIX_PATH should be set to <absolute_path/easy_profiler-release_dir>/lib/cmake/easy_profiler
 find_package(easy_profiler REQUIRED)  # STEP 1 #########################
 
 add_executable(my_application ${SOURCES})
